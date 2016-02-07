@@ -1,5 +1,8 @@
 'use strict';
 
+var checkdigit = require('checkdigit');
+var moment = require('moment');
+
 var AMKA_REGEX = /^[0-9]{11}$/;
 
 /**
@@ -10,19 +13,18 @@ var AMKA_REGEX = /^[0-9]{11}$/;
  */
 exports.validate = function (amka) {
   var _amka = String(amka);
-  if (!AMKA_REGEX.test(_amka) || _amka == '00000000000') {
+  if (!AMKA_REGEX.test(_amka) || _amka === '00000000000') {
     return false;
   }
-  var sum = 0;
-  for (var i = 1; i <= _amka.length; i++) {
-    var digit = parseInt(_amka.charAt(i - 1), 10);
-    if (i % 2 === 0) {
-      digit *= 2;
-      if (digit > 9) {
-          digit -= 9;
-      }
-    }
-    sum += digit;
+  // Validate that the last digit is the correct check digit (created using the
+  // Luhn algorithm https://en.wikipedia.org/wiki/Luhn_algorithm).
+  if (!checkdigit.mod10.isValid(_amka)) {
+    return false;
   }
-  return (sum % 10 === 0);
+  // Check that the first 6 digits are a valid date of birth.
+  var dob = moment(_amka.substring(0, 6), 'DDMMYY')
+  if (!dob.isValid()) {
+    return false;
+  }
+  return true;
 }

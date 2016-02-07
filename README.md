@@ -17,14 +17,9 @@ To validate an AMKA number:
 ```js
 var amka = require('greece-amka');
 
-// TODO find example valid number for example
-// amka.validate(''); // true
+amka.validate('01013099997'); // true
 amka.validate('00000000000'); // false
 ```
-
-## Thanks
-
-Validation algorithm by a [gist](https://gist.github.com/tdoumas/7875586) from @tdoumas
 
 ## License
 
