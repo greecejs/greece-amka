@@ -1,0 +1,43 @@
+{
+  "name": "greece-amka",
+  "version": "0.1.0",
+  "description": "Validation of a Greek social security number (AMKA)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "eslint .",
+    "cover": "istanbul cover test.js",
+    "ci": "npm run lint && npm run cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greecejs/greece-amka.git"
+  },
+  "keywords": [
+    "amka",
+    "ssn",
+    "validation",
+    "government",
+    "greek"
+  ],
+  "author": {
+    "name": "Thanos Lefteris",
+    "email": "alefteris@gmail.com",
+    "url": "http://thanoslefteris.com/"
+  },
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/greecejs/greece-amka/issues"
+  },
+  "homepage": "https://github.com/greecejs/greece-amka#readme",
+  "devDependencies": {
+    "eslint": "^2.0.0-rc.0",
+    "istanbul": "^0.4.2",
+    "tape": "^4.4.0"
+  }
+}
