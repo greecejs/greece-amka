@@ -1,6 +1,6 @@
 {
   "name": "greece-amka",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Validation of a Greek social security number (AMKA)",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,13 @@
     "email": "alefteris@gmail.com",
     "url": "http://thanoslefteris.com/"
   },
+  "contributors": [
+    {
+      "name": "Iordanis Kostelidis",
+      "email": "JorKostelidis@GoogleMail.com",
+      "url": "https://github.com/IordanisKostelidis"
+    }
+  ],
   "license": "MIT",
   "files": [
     "LICENSE",
@@ -37,7 +44,7 @@
   "homepage": "https://github.com/greecejs/greece-amka#readme",
   "dependencies": {
     "checkdigit": "1.1.1",
-    "moment": "2.11.2"
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "eslint": "^2.0.0-rc.0",
