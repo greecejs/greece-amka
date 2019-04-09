@@ -1,6 +1,6 @@
 {
   "name": "greece-amka",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Validation of a Greek social security number (AMKA)",
   "main": "index.js",
   "scripts": {
